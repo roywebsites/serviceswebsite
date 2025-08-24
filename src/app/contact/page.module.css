@@ -48,7 +48,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-3xl);
-  align-items: start;
+  align-items: flex-start;
 }
 
 .contactDetails h2 {
@@ -181,6 +181,13 @@
   margin-bottom: var(--spacing-xl);
   color: var(--color-text);
   line-height: 1.6;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
 }
 
 /* Map Section */
