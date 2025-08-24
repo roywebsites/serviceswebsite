@@ -1,0 +1,354 @@
+/* Hero Section */
+.hero {
+  background-image: url("/about.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroContent h1 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+  font-size: 3rem;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Biography Section */
+.biography {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+}
+
+.bioContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.bioImage {
+  display: flex;
+  justify-content: center;
+}
+
+.imagePlaceholder {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  background-color: var(--color-secondary);
+  border: 2px dashed var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.bioText h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.bioText p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+/* Experience Section */
+.experience {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-secondary);
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.experienceCard {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border: 1px solid rgba(26, 67, 49, 0.1);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.experienceCard h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.cardContent {
+  text-align: left;
+}
+
+.credential {
+  margin-bottom: var(--spacing-md);
+}
+
+.credential:last-child {
+  margin-bottom: 0;
+}
+
+.credential h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.credential p {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.credential span {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Mission Section */
+.mission {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+}
+
+.missionContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.missionText h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.missionText p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.values h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.valuesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.value {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: start;
+}
+
+.valueIcon {
+  font-size: 1.5rem;
+  margin-top: var(--spacing-xs);
+}
+
+.value h4 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.value p {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Approach Section */
+.approach {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-secondary);
+}
+
+.approachContent {
+  text-align: center;
+}
+
+.approachContent h2 {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.approachItem {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+  border: 1px solid rgba(26, 67, 49, 0.1);
+}
+
+.approachItem h3 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.approachItem p {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact CTA Section */
+.contactCta {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, rgba(26, 67, 49, 0.95) 100%);
+  color: var(--color-white);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xl);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaActions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+  
+  .bioContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+  
+  .missionContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .imagePlaceholder {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+  
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+  
+  .biography,
+  .experience,
+  .mission,
+  .approach,
+  .contactCta {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .experienceGrid,
+  .approachGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .experienceCard,
+  .approachItem {
+    padding: var(--spacing-lg);
+  }
+  
+  .ctaActions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 1.75rem;
+  }
+  
+  .imagePlaceholder {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .experienceCard,
+  .approachItem {
+    padding: var(--spacing-md);
+  }
+  
+  .value {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+} 

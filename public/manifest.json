@@ -1,0 +1,22 @@
+{
+  "name": "Lebanon Legal Services - Roy Mghames",
+  "short_name": "Legal Services LB",
+  "description": "Leading legal services in Lebanon and MENA region. Expert lawyers in Beirut providing comprehensive legal solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1A4331",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["legal", "business", "professional"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

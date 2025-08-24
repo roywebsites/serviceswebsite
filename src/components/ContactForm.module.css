@@ -1,0 +1,237 @@
+/* General Form Container */
+.formContainer {
+  max-width: 700px; /* A bit smaller for a sleeker feel */
+  margin: 2rem auto; /* Added vertical margin */
+  padding: var(--spacing-lg);
+}
+
+.form {
+  background-color: #ffffff;
+  padding: var(--spacing-3xl);
+  border-radius: 16px; /* Slightly smaller radius */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9e9e9;
+}
+
+/* Form Header */
+.formHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.formTitle {
+  font-size: 1.8rem; /* Reduced size */
+  font-weight: 700;
+  color: #1a202c; /* A darker, more neutral color */
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-heading);
+}
+
+.formSubtitle {
+  font-size: 1rem;
+  color: #718096; /* Softer text color */
+  line-height: 1.6;
+  max-width: 500px; /* Constrain line length */
+  margin: 0 auto;
+}
+
+/* Form Grid & Groups */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+.formGroup {
+  /* No margin-bottom needed here as 'gap' in formGrid handles it */
+  position: relative;
+}
+
+.fullWidth {
+  /* This class is no longer strictly necessary with a single column layout but can be kept for semantics */
+  grid-column: 1 / -1;
+}
+
+/* Labels and Inputs */
+.label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600; /* Slightly less bold */
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+}
+
+.required {
+  color: #e53e3e;
+  margin-left: 2px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px; /* Sleeker radius */
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: #2d3748;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #a0aec0;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(26, 103, 78, 0.1); /* Using a shadow from the primary color */
+}
+
+/* Specific field styles */
+.select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23718096' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  padding-right: 3rem;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* Action Button */
+.formActions {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid #f0f0f0;
+}
+
+.submitButton {
+  min-width: 200px;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px; /* Consistent radius */
+  color: white;
+  text-transform: none; /* More professional */
+  letter-spacing: normal;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(26, 103, 78, 0.2);
+}
+
+.submitButton:hover {
+  background-color: #1a5641; /* Darker shade of primary */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 103, 78, 0.25);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(26, 103, 78, 0.2);
+}
+
+.submitButton:disabled {
+  background-color: #a0aec0;
+  border-color: #a0aec0;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Status Messages */
+.successMessage,
+.errorMessage {
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.successMessage {
+  background-color: #f0fff4;
+  border: 1px solid #9ae6b4;
+  color: #2f855a;
+}
+
+.errorMessage {
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #c53030;
+}
+
+.successMessage p,
+.errorMessage p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Note Section */
+.formNote {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.formNote p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form {
+    padding: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    margin: 1rem auto;
+    padding: var(--spacing-sm);
+  }
+  .form {
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+  }
+  .formTitle {
+    font-size: 1.6rem;
+  }
+  .input, .select, .textarea {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+  }
+  .submitButton {
+    width: 100%;
+  }
+} 

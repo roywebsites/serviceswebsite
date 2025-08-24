@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build:frontend"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  NEXT_PUBLIC_API_URL = "https://your-backend-service.onrender.com"
+
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_API_URL = "https://your-backend-service.onrender.com"
