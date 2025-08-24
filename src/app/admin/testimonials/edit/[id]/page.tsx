@@ -14,11 +14,11 @@ interface Testimonial {
 }
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 async function getTestimonial(id: string) {
-  const response = await fetch(`http://localhost:5000/api/testimonials/${id}`, {
+  const response = await fetch(`https://serviceswebsite-1-xi2g.onrender.com/api/testimonials/${id}`, {
     cache: "no-store",
   });
   if (!response.ok) {
@@ -28,9 +28,9 @@ async function getTestimonial(id: string) {
   return data.data;
 }
 
-export default function EditTestimonialPage({ params }: PageProps) {
-  const id = use(Promise.resolve(params.id));
-  const testimonial = use(getTestimonial(id));
+export default async function EditTestimonialPage({ params }: PageProps) {
+  const { id } = await params;
+  const testimonial = await getTestimonial(id);
 
   return (
     <div className={styles.container}>

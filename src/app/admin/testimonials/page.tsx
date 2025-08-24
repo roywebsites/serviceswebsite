@@ -24,7 +24,7 @@ export default function TestimonialsPage() {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/testimonials", {
+      const response = await fetch("https://serviceswebsite-1-xi2g.onrender.com/api/testimonials", {
         credentials: "include",
       });
       const data = await response.json();
@@ -49,7 +49,7 @@ export default function TestimonialsPage() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/testimonials/${id}`,
+        `https://serviceswebsite-1-xi2g.onrender.com/api/testimonials/${id}`,
         {
           method: "DELETE",
           credentials: "include",

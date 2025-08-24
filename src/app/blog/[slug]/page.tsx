@@ -20,11 +20,11 @@ interface BlogPost {
 }
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 async function getBlogPost(slug: string) {
-  const response = await fetch(`http://localhost:5000/api/blogs/${slug}`, {
+  const response = await fetch(`https://serviceswebsite-1-xi2g.onrender.com/api/blogs/${slug}`, {
     cache: "no-store",
   });
   if (!response.ok) {
@@ -34,9 +34,9 @@ async function getBlogPost(slug: string) {
   return data.data;
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const slug = use(Promise.resolve(params.slug));
-  const post = use(getBlogPost(slug));
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
 
   // Calculate read time based on content length (average reading speed: 200 words per minute)
   const calculateReadTime = (content: string) => {

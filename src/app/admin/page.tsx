@@ -29,8 +29,8 @@ export default function AdminDashboard() {
   const fetchStats = async () => {
     try {
       const [blogsResponse, testimonialsResponse] = await Promise.all([
-        fetch("http://localhost:5000/api/blogs"),
-        fetch("http://localhost:5000/api/testimonials"),
+        fetch("https://serviceswebsite-1-xi2g.onrender.com/api/blogs"),
+        fetch("https://serviceswebsite-1-xi2g.onrender.com/api/testimonials"),
       ]);
 
       const blogsData = await blogsResponse.json();

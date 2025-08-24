@@ -43,7 +43,7 @@ export default function HomePage() {
   const fetchTestimonials = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/testimonials?published=true"
+        "https://serviceswebsite-1-xi2g.onrender.com/api/testimonials?published=true"
       );
       const data = await response.json();
 

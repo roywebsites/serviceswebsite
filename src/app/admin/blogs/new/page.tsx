@@ -22,7 +22,7 @@ export default function NewBlogPage() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/blogs", {
+      const response = await fetch("https://serviceswebsite-1-xi2g.onrender.com/api/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
