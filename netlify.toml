@@ -11,7 +11,7 @@
   status = 200
 
 [context.production.environment]
-  NEXT_PUBLIC_API_URL = "https://your-backend-service.onrender.com"
+  NEXT_PUBLIC_API_URL = "https://serviceswebsite-1-xi2g.onrender.com"
 
 [context.deploy-preview.environment]
-  NEXT_PUBLIC_API_URL = "https://your-backend-service.onrender.com"
+  NEXT_PUBLIC_API_URL = "https://serviceswebsite-1-xi2g.onrender.com"
