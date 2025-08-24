@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "./page.module.css";
@@ -88,10 +89,13 @@ export default function BlogPage() {
                   <article key={post._id} className={styles.postCard}>
                     <div className={styles.postImage}>
                       {post.imageUrl ? (
-                        <img
+                        <Image
                           src={post.imageUrl}
                           alt={post.title}
+                          width={400}
+                          height={250}
                           className={styles.postImageContent}
+                          style={{ objectFit: 'cover' }}
                         />
                       ) : (
                         <div className={styles.imagePlaceholder}>

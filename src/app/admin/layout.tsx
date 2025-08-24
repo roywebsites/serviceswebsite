@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { toast, ToastContainer } from "react-toastify";
@@ -26,14 +26,7 @@ export default function AdminLayout({
   const pathname = usePathname();
   const isLoginPage = pathname === "/admin/login";
 
-  useEffect(() => {
-    // Don't check auth on login page
-    if (!isLoginPage) {
-      checkAuth();
-    }
-  }, [isLoginPage]);
-
-  const checkAuth = async () => {
+  const checkAuth = useCallback(async () => {
     try {
       const response = await fetch(AUTH_ENDPOINTS.ME(), {
         // Add cache control to prevent unnecessary requests
@@ -64,7 +57,14 @@ export default function AdminLayout({
     } finally {
       setLoading(false);
     }
-  };
+  }, [router]);
+
+  useEffect(() => {
+    // Don't check auth on login page
+    if (!isLoginPage) {
+      checkAuth();
+    }
+  }, [isLoginPage, checkAuth]);
 
   const handleLogout = async () => {
     try {
