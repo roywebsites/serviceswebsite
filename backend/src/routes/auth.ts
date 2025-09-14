@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
     res.cookie("admin-token", token, {
       httpOnly: true,
       secure: false, // Set to false for now to test
-      sameSite: "lax",
+      sameSite: "none", // Allow cross-origin cookies
       path: "/",
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
     });
@@ -114,7 +114,7 @@ router.post("/logout", (req, res) => {
     res.cookie("admin-token", "", {
       httpOnly: true,
       secure: false, // Set to false for now to test
-      sameSite: "lax",
+      sameSite: "none", // Allow cross-origin cookies
       maxAge: 0,
     });
 
