@@ -18,7 +18,7 @@ interface PageProps {
 }
 
 async function getTestimonial(id: string) {
-  const response = await fetch(`https://serviceswebsite-1-xi2g.onrender.com/api/testimonials/${id}`, {
+  const response = await fetch(`https://serviceswebsite-2.onrender.com/api/testimonials/${id}`, {
     cache: "no-store",
   });
   if (!response.ok) {

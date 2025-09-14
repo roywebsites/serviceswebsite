@@ -33,7 +33,7 @@ export default function BlogPage() {
   const fetchBlogPosts = async () => {
     try {
       const response = await fetch(
-        "https://serviceswebsite-1-xi2g.onrender.com/api/blogs?published=true"
+        "https://serviceswebsite-2.onrender.com/api/blogs?published=true"
       );
       const data = await response.json();
 

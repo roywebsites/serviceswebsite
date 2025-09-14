@@ -24,7 +24,7 @@ interface PageProps {
 }
 
 async function getBlogPost(slug: string) {
-  const response = await fetch(`https://serviceswebsite-1-xi2g.onrender.com/api/blogs/${slug}`, {
+  const response = await fetch(`https://serviceswebsite-2.onrender.com/api/blogs/${slug}`, {
     cache: "no-store",
   });
   if (!response.ok) {
