@@ -24,9 +24,12 @@ export default function TestimonialsPage() {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await fetch("https://serviceswebsite-1-xi2g.onrender.com/api/testimonials", {
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://serviceswebsite-2.onrender.com/api/testimonials",
+        {
+          credentials: "include",
+        }
+      );
       const data = await response.json();
 
       if (data.success) {
@@ -49,7 +52,7 @@ export default function TestimonialsPage() {
 
     try {
       const response = await fetch(
-        `https://serviceswebsite-1-xi2g.onrender.com/api/testimonials/${id}`,
+        `https://serviceswebsite-2.onrender.com/api/testimonials/${id}`,
         {
           method: "DELETE",
           credentials: "include",

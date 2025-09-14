@@ -50,7 +50,7 @@ const Admin = mongoose.model('Admin', AdminSchema);
 async function initializeAdmin() {
   try {
     // Connect to MongoDB
-    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/roy-mghames-legal';
+    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://roymgh8:roymg9@cluster0.1lnyou1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
     await mongoose.connect(MONGODB_URI);
     
     console.log('Connected to MongoDB');

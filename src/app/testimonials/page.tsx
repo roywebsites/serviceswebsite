@@ -14,7 +14,7 @@ interface Testimonial {
 
 async function getTestimonials() {
   const response = await fetch(
-    "https://serviceswebsite-1-xi2g.onrender.com/api/testimonials?published=true",
+    "https://serviceswebsite-2.onrender.com/api/testimonials?published=true",
     {
       cache: "no-store",
     }

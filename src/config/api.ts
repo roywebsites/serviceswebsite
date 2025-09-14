@@ -1,6 +1,6 @@
 // API Configuration
 export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://serviceswebsite-1-xi2g.onrender.com";
+  process.env.NEXT_PUBLIC_API_URL || "https://serviceswebsite-2.onrender.com";
 
 // Helper function to build API URLs
 export const buildApiUrl = (path: string) =>

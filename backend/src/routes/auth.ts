@@ -55,7 +55,7 @@ router.post("/login", async (req, res) => {
     // Set HTTP-only cookie
     res.cookie("admin-token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: false, // Set to false for now to test
       sameSite: "lax",
       path: "/",
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
@@ -113,7 +113,7 @@ router.post("/logout", (req, res) => {
     // Clear the admin token cookie
     res.cookie("admin-token", "", {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: false, // Set to false for now to test
       sameSite: "lax",
       maxAge: 0,
     });
