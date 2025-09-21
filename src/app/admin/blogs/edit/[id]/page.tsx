@@ -5,6 +5,8 @@ import { useRouter, useParams } from "next/navigation";
 import { toast } from "react-toastify";
 import styles from "../../../admin.module.css";
 
+export const dynamic = "force-static";
+
 interface Blog {
   _id: string;
   title: string;

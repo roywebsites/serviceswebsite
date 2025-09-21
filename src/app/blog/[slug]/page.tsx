@@ -4,6 +4,8 @@ import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import styles from "./page.module.css";
 
+export const dynamic = "force-static";
+
 interface BlogPost {
   _id: string;
   title: string;
