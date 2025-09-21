@@ -14,6 +14,7 @@ import {
   HandshakeIcon,
   DocumentIcon,
   ClipboardIcon,
+  ZapIcon,
 } from "../../components/Icons";
 
 export const metadata: Metadata = {
@@ -118,11 +119,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Corporate Law Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -131,11 +127,6 @@ export default function ServicesPage() {
         <section id="real-estate-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Real Estate Law Image</span>
-                </div>
-              </div>
 
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
@@ -219,11 +210,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Family Law Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -232,11 +218,6 @@ export default function ServicesPage() {
         <section id="criminal-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Criminal Law Image</span>
-                </div>
-              </div>
 
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
@@ -284,7 +265,9 @@ export default function ServicesPage() {
           <div className="container">
             <div className={styles.serviceContent}>
               <div className={styles.serviceText}>
-                <div className={styles.serviceIcon}>⚡</div>
+                <div className={styles.serviceIcon}>
+                  <ZapIcon size={48} color="#FF6B35" />
+                </div>
                 <h2>Civil Litigation</h2>
                 <p>
                   Skilled representation in civil disputes and litigation
@@ -319,11 +302,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Civil Litigation Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -370,11 +348,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Intellectual Property Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -383,11 +356,6 @@ export default function ServicesPage() {
         <section id="commercial-business-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Commercial Business Law Image</span>
-                </div>
-              </div>
 
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
@@ -472,11 +440,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Market Capital Law Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -485,11 +448,6 @@ export default function ServicesPage() {
         <section id="labor-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Labor Law Image</span>
-                </div>
-              </div>
 
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
@@ -575,11 +533,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Arbitration & ADR Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -588,11 +541,6 @@ export default function ServicesPage() {
         <section id="legal-draftings" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Legal Draftings Image</span>
-                </div>
-              </div>
 
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
@@ -682,11 +630,6 @@ export default function ServicesPage() {
                 </a>
               </div>
 
-              <div className={styles.serviceImage}>
-                <div className={styles.imagePlaceholder}>
-                  <span>Legal Expeditor Services Image</span>
-                </div>
-              </div>
             </div>
           </div>
         </section>

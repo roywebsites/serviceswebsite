@@ -113,10 +113,12 @@ export default function HomePage() {
               </div>
               <div className={styles.introImage}>
                 <Image
-                  src="/ProfessionalPhoto.jpg"
-                  alt="Professional Photo"
-                  width={300}
-                  height={450}
+                  src="/roymainimage.jpg"
+                  alt="Roy Mghames - Legal Services"
+                  width={400}
+                  height={600}
+                  quality={95}
+                  priority
                   className={styles.imagePlaceholder}
                 />
               </div>
