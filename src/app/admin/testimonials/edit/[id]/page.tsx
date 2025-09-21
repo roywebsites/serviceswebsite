@@ -4,13 +4,7 @@ import Header from "../../../../../components/Header";
 import Footer from "../../../../../components/Footer";
 import styles from "../../../admin.module.css";
 
-export const dynamic = "force-static";
-
-export async function generateStaticParams() {
-  // For static export, we'll return an empty array since these are admin pages
-  // that don't need to be pre-generated
-  return [];
-}
+// Dynamic route - will be handled at runtime
 
 interface Testimonial {
   _id: string;

@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  trailingSlash: true,
+  // output: 'export', // Disabled - not compatible with client-side admin pages
+  // trailingSlash: true, // Disabled - not compatible with client-side admin pages
   images: {
     unoptimized: true,
   },

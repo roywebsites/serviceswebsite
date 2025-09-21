@@ -5,13 +5,8 @@ import { useRouter, useParams } from "next/navigation";
 import { toast } from "react-toastify";
 import styles from "../../../admin.module.css";
 
-export const dynamic = "force-static";
-
-export async function generateStaticParams() {
-  // For static export, we'll return an empty array since these are admin pages
-  // that don't need to be pre-generated
-  return [];
-}
+// This page will be handled client-side and not statically generated
+export const dynamic = 'force-dynamic';
 
 interface Blog {
   _id: string;
