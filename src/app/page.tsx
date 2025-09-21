@@ -65,12 +65,13 @@ export default function HomePage() {
           <div className="container">
             <div className={styles.heroContent}>
               <h1 className={styles.heroTitle}>
-                Expert Legal Counsel in Lebanon
+                LEGAL SERVICES LB - MGHAMES LEGAL
               </h1>
               <p className={styles.heroSubtitle}>
-                Your Trusted Lawyer in Beirut - Providing comprehensive legal
-                solutions with personalized attention, experienced counsel, and
-                results-driven approach.
+                Your trusted associate in legal services all around Lebanon and
+                in several fields, providing comprehensive legal solutions with
+                personalized attention, experienced counsel, and results-driven
+                approach.
               </p>
               <div className={styles.heroActions}>
                 <a href="/contact" className="btn btn-primary btn-lg">
@@ -91,17 +92,18 @@ export default function HomePage() {
               <div className={styles.introText}>
                 <h2>Welcome to Our Legal Services</h2>
                 <p>
-                  With years of experience in Lebanese law, I am committed to
+                  With great experience in Lebanese law, I am committed to
                   providing exceptional legal services to individuals and
                   businesses throughout Lebanon. My practice is built on the
                   foundations of integrity, expertise, and unwavering dedication
-                  to my clients&apos; success.
+                  to my clients' success.
                 </p>
                 <p>
-                  Whether you&apos;re facing a complex corporate matter,
-                  navigating real estate transactions, or need assistance with
-                  family law issues, I provide personalized legal solutions
-                  tailored to your specific needs.
+                  Whether you're facing a complex corporate matter, navigating
+                  real estate transactions, or need assistance with your
+                  business and trademark for startups or in-market companies, I
+                  provide personalized legal solutions tailored to your specific
+                  needs with my focus on business law fields.
                 </p>
                 <a href="/about" className="btn btn-secondary">
                   Learn More About Me

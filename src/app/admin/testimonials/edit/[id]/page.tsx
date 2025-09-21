@@ -7,9 +7,11 @@ import styles from "../../../admin.module.css";
 interface Testimonial {
   _id: string;
   name: string;
-  role: string;
+  position: string;
   content: string;
+  rating: number;
   published: boolean;
+  featured: boolean;
   createdAt: string;
 }
 
@@ -18,9 +20,12 @@ interface PageProps {
 }
 
 async function getTestimonial(id: string) {
-  const response = await fetch(`https://serviceswebsite-2.onrender.com/api/testimonials/${id}`, {
-    cache: "no-store",
-  });
+  const response = await fetch(
+    `https://serviceswebsite-2.onrender.com/api/testimonials/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
   if (!response.ok) {
     throw new Error("Failed to fetch testimonial");
   }
@@ -52,12 +57,12 @@ export default async function EditTestimonialPage({ params }: PageProps) {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="role">Role/Position</label>
+          <label htmlFor="position">Role/Position</label>
           <input
             type="text"
-            id="role"
-            name="role"
-            defaultValue={testimonial.role}
+            id="position"
+            name="position"
+            defaultValue={testimonial.position}
             required
             className={styles.input}
           />
@@ -76,6 +81,23 @@ export default async function EditTestimonialPage({ params }: PageProps) {
         </div>
 
         <div className={styles.formGroup}>
+          <label htmlFor="rating">Rating (1-5)</label>
+          <select
+            id="rating"
+            name="rating"
+            defaultValue={testimonial.rating}
+            required
+            className={styles.input}
+          >
+            <option value={1}>1 Star</option>
+            <option value={2}>2 Stars</option>
+            <option value={3}>3 Stars</option>
+            <option value={4}>4 Stars</option>
+            <option value={5}>5 Stars</option>
+          </select>
+        </div>
+
+        <div className={styles.formGroup}>
           <label className={styles.checkboxLabel}>
             <input
               type="checkbox"
@@ -84,6 +106,18 @@ export default async function EditTestimonialPage({ params }: PageProps) {
               className={styles.checkbox}
             />
             Published
+          </label>
+        </div>
+
+        <div className={styles.formGroup}>
+          <label className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              name="featured"
+              defaultChecked={testimonial.featured}
+              className={styles.checkbox}
+            />
+            Featured testimonial
           </label>
         </div>
 

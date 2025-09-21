@@ -9,9 +9,11 @@ export default function NewTestimonialPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
-    role: "",
+    position: "",
     content: "",
+    rating: 5,
     published: false,
+    featured: false,
   });
   const [loading, setLoading] = useState(false);
 
@@ -20,14 +22,17 @@ export default function NewTestimonialPage() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://serviceswebsite-2.onrender.com/api/testimonials", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://serviceswebsite-2.onrender.com/api/testimonials",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -46,13 +51,19 @@ export default function NewTestimonialPage() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value, type } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]:
-        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+        type === "checkbox"
+          ? (e.target as HTMLInputElement).checked
+          : type === "select-one"
+          ? parseInt(value)
+          : value,
     }));
   };
 
@@ -77,12 +88,12 @@ export default function NewTestimonialPage() {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="role">Role/Position</label>
+          <label htmlFor="position">Role/Position</label>
           <input
             type="text"
-            id="role"
-            name="role"
-            value={formData.role}
+            id="position"
+            name="position"
+            value={formData.position}
             onChange={handleChange}
             required
             className={styles.input}
@@ -103,6 +114,24 @@ export default function NewTestimonialPage() {
         </div>
 
         <div className={styles.formGroup}>
+          <label htmlFor="rating">Rating (1-5)</label>
+          <select
+            id="rating"
+            name="rating"
+            value={formData.rating}
+            onChange={handleChange}
+            required
+            className={styles.input}
+          >
+            <option value={1}>1 Star</option>
+            <option value={2}>2 Stars</option>
+            <option value={3}>3 Stars</option>
+            <option value={4}>4 Stars</option>
+            <option value={5}>5 Stars</option>
+          </select>
+        </div>
+
+        <div className={styles.formGroup}>
           <label className={styles.checkboxLabel}>
             <input
               type="checkbox"
@@ -112,6 +141,19 @@ export default function NewTestimonialPage() {
               className={styles.checkbox}
             />
             Publish immediately
+          </label>
+        </div>
+
+        <div className={styles.formGroup}>
+          <label className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              name="featured"
+              checked={formData.featured}
+              onChange={handleChange}
+              className={styles.checkbox}
+            />
+            Featured testimonial
           </label>
         </div>
 
