@@ -70,12 +70,12 @@ export default function NewTestimonialPage() {
   return (
     <div className={styles.container}>
       <div className={styles.formHeader}>
-        <h1>New Testimonial</h1>
+        <h1>New Legal Template</h1>
       </div>
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Template Name</label>
           <input
             type="text"
             id="name"
@@ -84,11 +84,12 @@ export default function NewTestimonialPage() {
             onChange={handleChange}
             required
             className={styles.input}
+            placeholder="e.g., Employment Contract Template"
           />
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="position">Role/Position</label>
+          <label htmlFor="position">Category</label>
           <input
             type="text"
             id="position"
@@ -97,11 +98,12 @@ export default function NewTestimonialPage() {
             onChange={handleChange}
             required
             className={styles.input}
+            placeholder="e.g., Employment Law, Corporate Law, etc."
           />
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="content">Testimonial Content</label>
+          <label htmlFor="content">Template Description</label>
           <textarea
             id="content"
             name="content"
@@ -110,11 +112,12 @@ export default function NewTestimonialPage() {
             required
             className={styles.textarea}
             rows={5}
+            placeholder="Describe what this template includes and its benefits..."
           />
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="rating">Rating (1-5)</label>
+          <label htmlFor="rating">Quality Rating (1-5)</label>
           <select
             id="rating"
             name="rating"
@@ -123,11 +126,11 @@ export default function NewTestimonialPage() {
             required
             className={styles.input}
           >
-            <option value={1}>1 Star</option>
-            <option value={2}>2 Stars</option>
-            <option value={3}>3 Stars</option>
-            <option value={4}>4 Stars</option>
-            <option value={5}>5 Stars</option>
+            <option value={1}>1 Star - Basic</option>
+            <option value={2}>2 Stars - Good</option>
+            <option value={3}>3 Stars - Very Good</option>
+            <option value={4}>4 Stars - Excellent</option>
+            <option value={5}>5 Stars - Premium</option>
           </select>
         </div>
 
@@ -153,7 +156,7 @@ export default function NewTestimonialPage() {
               onChange={handleChange}
               className={styles.checkbox}
             />
-            Featured testimonial
+            Featured template
           </label>
         </div>
 
@@ -170,7 +173,7 @@ export default function NewTestimonialPage() {
             disabled={loading}
             className={`${styles.button} ${styles.primaryButton}`}
           >
-            {loading ? "Creating..." : "Create Testimonial"}
+            {loading ? "Creating..." : "Create Template"}
           </button>
         </div>
       </form>

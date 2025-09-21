@@ -27,9 +27,11 @@ import {
 interface Testimonial {
   _id: string;
   name: string;
-  role: string;
+  position: string;
   content: string;
+  rating: number;
   published: boolean;
+  featured: boolean;
   createdAt: string;
 }
 
@@ -371,23 +373,37 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Legal Templates */}
         <section className={styles.testimonials}>
           <div className="container">
             <div className={styles.sectionHeader}>
-              <h2>Client Testimonials</h2>
-              <p>What our clients say about our legal services</p>
+              <h2>Legal Templates & Documents</h2>
+              <p>
+                Professional legal templates and documents available for
+                purchase
+              </p>
             </div>
 
             <div className={styles.testimonialsGrid}>
-              {testimonials.map((testimonial) => (
-                <div key={testimonial._id} className={styles.testimonial}>
+              {testimonials.map((template) => (
+                <div key={template._id} className={styles.testimonial}>
                   <div className={styles.testimonialContent}>
-                    <p>&quot;{testimonial.content}&quot;</p>
+                    <h3>{template.name}</h3>
+                    <p>{template.content}</p>
+                    <div className={styles.templatePrice}>
+                      <span className={styles.price}>Contact for Pricing</span>
+                    </div>
                   </div>
                   <div className={styles.testimonialAuthor}>
-                    <strong>{testimonial.name}</strong>
-                    <span>{testimonial.role}</span>
+                    <strong>{template.position}</strong>
+                    <a
+                      href={`https://wa.me/96170653966?text=Hi, I'm interested in purchasing the ${template.name} template. Please provide more details and pricing.`}
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Order via WhatsApp
+                    </a>
                   </div>
                 </div>
               ))}

@@ -82,9 +82,9 @@ export default function TestimonialsPage() {
   return (
     <div className={styles.container}>
       <div className={styles.tableHeader}>
-        <h1 className={styles.tableTitle}>Testimonials</h1>
+        <h1 className={styles.tableTitle}>Legal Templates</h1>
         <Link href="/admin/testimonials/new" className={styles.addBtn}>
-          ➕ New Testimonial
+          ➕ New Template
         </Link>
       </div>
 
@@ -92,39 +92,39 @@ export default function TestimonialsPage() {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Role</th>
+              <th>Template Name</th>
+              <th>Category</th>
               <th>Status</th>
               <th>Created At</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {testimonials.map((testimonial) => (
-              <tr key={testimonial._id}>
-                <td>{testimonial.name}</td>
-                <td>{testimonial.role}</td>
+            {testimonials.map((template) => (
+              <tr key={template._id}>
+                <td>{template.name}</td>
+                <td>{template.position}</td>
                 <td>
                   <span
                     className={`${styles.badge} ${
-                      testimonial.published
+                      template.published
                         ? styles.badgePublished
                         : styles.badgeDraft
                     }`}
                   >
-                    {testimonial.published ? "Published" : "Draft"}
+                    {template.published ? "Published" : "Draft"}
                   </span>
                 </td>
-                <td>{new Date(testimonial.createdAt).toLocaleDateString()}</td>
+                <td>{new Date(template.createdAt).toLocaleDateString()}</td>
                 <td>
                   <Link
-                    href={`/admin/testimonials/edit/${testimonial._id}`}
+                    href={`/admin/testimonials/edit/${template._id}`}
                     className={`${styles.actionBtn} ${styles.editBtn}`}
                   >
                     Edit
                   </Link>
                   <button
-                    onClick={() => handleDelete(testimonial._id)}
+                    onClick={() => handleDelete(template._id)}
                     className={`${styles.actionBtn} ${styles.deleteBtn}`}
                   >
                     Delete
