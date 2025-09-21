@@ -6,6 +6,21 @@ import styles from "./page.module.css";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  // Generate static params for common blog posts
+  // This helps with SEO and performance
+  return [
+    { slug: "starting-business-lebanon" },
+    { slug: "real-estate-law-guide" },
+    { slug: "divorce-proceedings-lebanon" },
+    { slug: "criminal-defense-lebanon" },
+    { slug: "intellectual-property-protection" },
+    { slug: "commercial-law-lebanon" },
+    { slug: "labor-law-guide" },
+    { slug: "arbitration-benefits" },
+  ];
+}
+
 interface BlogPost {
   _id: string;
   title: string;
