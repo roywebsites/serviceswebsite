@@ -139,11 +139,10 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/logo.svg", type: "image/svg+xml" }
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/logo.svg", type: "image/svg+xml", sizes: "any" }
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.svg",
     apple: "/logo.svg",
   },
   appleWebApp: {
@@ -372,6 +371,11 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/logo.svg" />
+      </head>
       <body>
         <script
           type="application/ld+json"
