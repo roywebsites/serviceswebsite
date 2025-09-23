@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import {
+  ShieldIcon,
+  UsersIcon,
+  TrophyIcon,
+  WhatsAppIcon,
+} from "../../components/Icons";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -52,93 +58,68 @@ export default function AboutPage() {
               <div className={styles.bioText}>
                 <h2>Professional Biography</h2>
                 <p>
-                  Roy Mghames is a detail-oriented legal associate and
-                  consultant, holding a Master’s 2 degree in Private Law with a
-                  specialization in Business Law, in addition to a Bachelor’s
-                  and Master’s 1 degree in Law from Notre Dame University.
+                  <strong>Roy Mghames</strong> holds a{" "}
+                  <strong>Law Degree (LLB and M1)</strong> from
+                  <strong>Notre Dame University (NDU)</strong> in{" "}
+                  <strong>International and Lebanese Laws</strong>, and a
+                  <strong>Master’s Degree (M2)</strong> from{" "}
+                  <strong>Sagesse University (ULS)</strong>, specializing in
+                  <strong>Private Laws</strong> with a focus on{" "}
+                  <strong>Business, Commercial, and Corporate</strong> matters.
                 </p>
 
                 <p>
-                  He offers a broad range of legal expertise, with a focus on
-                  civil, business, commercial, corporate, estate, intellectual
-                  property, arbitration, dispute resolution, mergers and
-                  acquisitions, and capital markets law. His practice also
-                  extends to criminal, labor, and administrative matters,
-                  providing clients with comprehensive legal support across
-                  sectors.
-                </p>
-
-                <p>
-                  Roy is committed to delivering high-quality legal services
-                  across Lebanon, with a strong focus on civil and business law.
-                  His trusted approach to criminal cases has also helped foster
-                  long-term relationships with clients built on confidence and
-                  results.
+                  His practice centers on <strong>Corporate Law</strong> for
+                  companies and establishments, <strong>Business Law</strong>,{" "}
+                  <strong>Commercial Law</strong> including trade agreements,
+                  sales, and trademarks, <strong>Real Estate</strong>,{" "}
+                  <strong>Intellectual Property</strong> with emphasis on
+                  trademarks and patents registration, and{" "}
+                  <strong>Civil Law</strong> covering contracts and drafting. He
+                  also offers comprehensive{" "}
+                  <strong>legal services, consultancy, and expediture</strong>.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Education & Experience */}
-        <section className={styles.experience}>
+        {/* Associate Biography */}
+        <section className={styles.biography}>
           <div className="container">
-            <div className={styles.experienceGrid}>
-              <div className={styles.experienceCard}>
-                <div className={styles.cardIcon}>🎓</div>
-                <h3>Education</h3>
-                <div className={styles.cardContent}>
-                  <div className={styles.credential}>
-                    <h4>Law Degree (LL.B)</h4>
-                    <p>Lebanese University Faculty of Law</p>
-                    <span>Graduated with Honors</span>
-                  </div>
-                  <div className={styles.credential}>
-                    <h4>Master of Laws (LL.M)</h4>
-                    <p>Specialized in Commercial Law</p>
-                    <span>Advanced Legal Studies</span>
-                  </div>
-                </div>
+            <div className={styles.bioContent}>
+              <div className={styles.bioImage}>
+                <Image
+                  src="/JasonKrim.jpg"
+                  alt="Jason Krim - Attorney at Law"
+                  width={400}
+                  height={600}
+                  quality={95}
+                  className={styles.imagePlaceholder}
+                />
               </div>
 
-              <div className={styles.experienceCard}>
-                <div className={styles.cardIcon}>⚖️</div>
-                <h3>Professional Experience</h3>
-                <div className={styles.cardContent}>
-                  <div className={styles.credential}>
-                    <h4>Lebanese Bar Association</h4>
-                    <p>Licensed Attorney at Law</p>
-                    <span>Member in Good Standing</span>
-                  </div>
-                  <div className={styles.credential}>
-                    <h4>Years of Practice</h4>
-                    <p>Extensive Legal Experience</p>
-                    <span>Serving Lebanon&apos;s Legal Community</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.experienceCard}>
-                <div className={styles.cardIcon}>🏆</div>
-                <h3>Specializations</h3>
-                <div className={styles.cardContent}>
-                  <div className={styles.credential}>
-                    <h4>Corporate Law</h4>
-                    <p>Business Formation & Governance</p>
-                  </div>
-                  <div className={styles.credential}>
-                    <h4>Real Estate Law</h4>
-                    <p>Property Transactions & Disputes</p>
-                  </div>
-                  <div className={styles.credential}>
-                    <h4>Family & Criminal Law</h4>
-                    <p>Personal Legal Matters</p>
-                  </div>
-                </div>
+              <div className={styles.bioText}>
+                <h2>Associate – Jason Krim</h2>
+                <p>
+                  <strong>Jason Krim</strong> is an{" "}
+                  <strong>Attorney at Law</strong> and a{" "}
+                  <strong>Member of the Beirut Bar Association</strong>.
+                </p>
+                <p>
+                  He holds a <strong>BA and M1 in Law</strong> from the{" "}
+                  <strong>Lebanese University</strong>, and an
+                  <strong>M2</strong> from{" "}
+                  <strong>Sagesse University (ULS)</strong> in{" "}
+                  <strong>Private Law</strong>, specializing in
+                  <strong>Oil and Gas Law</strong>.
+                </p>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Removed credential cards; details emphasized in biography paragraphs above */}
 
         {/* Mission & Values */}
         <section className={styles.mission}>
@@ -167,7 +148,9 @@ export default function AboutPage() {
                 <h3>Core Values</h3>
                 <div className={styles.valuesList}>
                   <div className={styles.value}>
-                    <div className={styles.valueIcon}>🔒</div>
+                    <div className={styles.valueIcon}>
+                      <ShieldIcon size={24} color="var(--color-accent)" />
+                    </div>
                     <div>
                       <h4>Integrity</h4>
                       <p>
@@ -178,7 +161,9 @@ export default function AboutPage() {
                   </div>
 
                   <div className={styles.value}>
-                    <div className={styles.valueIcon}>👥</div>
+                    <div className={styles.valueIcon}>
+                      <UsersIcon size={24} color="var(--color-accent)" />
+                    </div>
                     <div>
                       <h4>Client-Centered</h4>
                       <p>
@@ -189,7 +174,9 @@ export default function AboutPage() {
                   </div>
 
                   <div className={styles.value}>
-                    <div className={styles.valueIcon}>📈</div>
+                    <div className={styles.valueIcon}>
+                      <TrophyIcon size={24} color="var(--color-accent)" />
+                    </div>
                     <div>
                       <h4>Excellence</h4>
                       <p>
@@ -200,7 +187,9 @@ export default function AboutPage() {
                   </div>
 
                   <div className={styles.value}>
-                    <div className={styles.valueIcon}>💬</div>
+                    <div className={styles.valueIcon}>
+                      <WhatsAppIcon size={24} color="var(--color-accent)" />
+                    </div>
                     <div>
                       <h4>Communication</h4>
                       <p>

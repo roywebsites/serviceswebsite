@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ContactForm from "../../components/ContactForm";
+import {
+  EmailIcon,
+  PhoneIcon,
+  WhatsAppIcon,
+  LocationIcon,
+} from "../../components/Icons";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -51,7 +57,9 @@ export default function ContactPage() {
 
                 <div className={styles.contactMethods}>
                   <div className={styles.contactMethod}>
-                    <div className={styles.methodIcon}>📧</div>
+                    <div className={styles.methodIcon}>
+                      <EmailIcon />
+                    </div>
                     <div className={styles.methodInfo}>
                       <h3>Email</h3>
                       <p>
@@ -64,7 +72,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className={styles.contactMethod}>
-                    <div className={styles.methodIcon}>📞</div>
+                    <div className={styles.methodIcon}>
+                      <PhoneIcon />
+                    </div>
                     <div className={styles.methodInfo}>
                       <h3>Phone</h3>
                       <p>
@@ -75,7 +85,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className={styles.contactMethod}>
-                    <div className={styles.methodIcon}>💬</div>
+                    <div className={styles.methodIcon}>
+                      <WhatsAppIcon />
+                    </div>
                     <div className={styles.methodInfo}>
                       <h3>WhatsApp</h3>
                       <p>
@@ -93,7 +105,9 @@ export default function ContactPage() {
                   </div>
 
                   <div className={styles.contactMethod}>
-                    <div className={styles.methodIcon}>📍</div>
+                    <div className={styles.methodIcon}>
+                      <LocationIcon />
+                    </div>
                     <div className={styles.methodInfo}>
                       <h3>Office Location</h3>
                       <p>
@@ -213,7 +227,9 @@ export default function ContactPage() {
             className={styles.whatsappButton}
             title="Contact via WhatsApp"
           >
-            <span className={styles.whatsappIcon}>💬</span>
+            <span className={styles.whatsappIcon}>
+              <WhatsAppIcon />
+            </span>
             <span className={styles.whatsappText}>WhatsApp</span>
           </a>
         </div>

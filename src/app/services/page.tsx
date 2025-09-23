@@ -15,6 +15,9 @@ import {
   DocumentIcon,
   ClipboardIcon,
   ZapIcon,
+  TargetIcon,
+  BookIcon,
+  ClockIcon,
 } from "../../components/Icons";
 
 export const metadata: Metadata = {
@@ -118,7 +121,6 @@ export default function ServicesPage() {
                   Get Corporate Law Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -127,7 +129,6 @@ export default function ServicesPage() {
         <section id="real-estate-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
                   <BuildingIcon size={48} color="#4169E1" />
@@ -209,7 +210,6 @@ export default function ServicesPage() {
                   Get Family Law Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -218,7 +218,6 @@ export default function ServicesPage() {
         <section id="criminal-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
                   <ShieldIcon size={48} color="#32CD32" />
@@ -301,7 +300,6 @@ export default function ServicesPage() {
                   Get Civil Litigation Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -347,7 +345,6 @@ export default function ServicesPage() {
                   Get IP Law Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -356,7 +353,6 @@ export default function ServicesPage() {
         <section id="commercial-business-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
                   <StoreIcon size={48} color="#9932CC" />
@@ -439,7 +435,6 @@ export default function ServicesPage() {
                   Get Capital Markets Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -448,7 +443,6 @@ export default function ServicesPage() {
         <section id="labor-law" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
                   <WorkerIcon size={48} color="#FF8C00" />
@@ -532,7 +526,6 @@ export default function ServicesPage() {
                   Get ADR Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -541,7 +534,6 @@ export default function ServicesPage() {
         <section id="legal-draftings" className={styles.serviceSection}>
           <div className="container">
             <div className={styles.serviceContent}>
-
               <div className={styles.serviceText}>
                 <div className={styles.serviceIcon}>
                   <DocumentIcon size={48} color="#4682B4" />
@@ -629,7 +621,6 @@ export default function ServicesPage() {
                   Get Expeditor Services Consultation
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -641,7 +632,9 @@ export default function ServicesPage() {
               <h2>Why Choose Our Legal Services</h2>
               <div className={styles.benefitsGrid}>
                 <div className={styles.benefit}>
-                  <div className={styles.benefitIcon}>🎯</div>
+                  <div className={styles.benefitIcon}>
+                    <TargetIcon size={28} color="var(--color-accent)" />
+                  </div>
                   <h3>Tailored Solutions</h3>
                   <p>
                     Each legal strategy is customized to your specific needs and
@@ -650,7 +643,9 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={styles.benefit}>
-                  <div className={styles.benefitIcon}>📚</div>
+                  <div className={styles.benefitIcon}>
+                    <BookIcon size={28} color="var(--color-accent)" />
+                  </div>
                   <h3>Local Expertise</h3>
                   <p>
                     Deep understanding of Lebanese legal system and regulatory
@@ -659,7 +654,9 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={styles.benefit}>
-                  <div className={styles.benefitIcon}>⏰</div>
+                  <div className={styles.benefitIcon}>
+                    <ClockIcon size={28} color="var(--color-accent)" />
+                  </div>
                   <h3>Responsive Service</h3>
                   <p>
                     Prompt communication and quick response to urgent legal
@@ -668,7 +665,9 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={styles.benefit}>
-                  <div className={styles.benefitIcon}>🤝</div>
+                  <div className={styles.benefitIcon}>
+                    <HandshakeIcon size={28} color="var(--color-accent)" />
+                  </div>
                   <h3>Client Partnership</h3>
                   <p>
                     Building long-term relationships based on trust and
