@@ -44,14 +44,52 @@
 /* Biography Section */
 .biography {
   padding: var(--spacing-3xl) 0;
-  background-color: var(--color-white);
+  background: linear-gradient(180deg, var(--color-secondary) 0%, rgba(237, 245, 241, 0.8) 100%);
 }
 
 .bioContent {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--spacing-2xl);
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
   align-items: flex-start;
+}
+
+.bioCard {
+  background-color: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(26, 67, 49, 0.1);
+}
+
+.bioCard h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.bioSubheading {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+}
+
+.bioLead {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+
+.educationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.educationList li {
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--color-primary);
 }
 
 .bioImage {
@@ -272,6 +310,76 @@
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Team Section */
+.team {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-white);
+}
+
+.sectionHeaderCentered {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.teamCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(26, 67, 49, 0.1);
+}
+
+.teamImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.teamImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.teamInfo {
+  padding: var(--spacing-xl);
+}
+
+.teamName {
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.teamTitle {
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.teamBio {
+  margin: 0;
+  color: var(--color-text);
+}
+
+@media (max-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamCard {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Responsive Design */

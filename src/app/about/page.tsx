@@ -43,77 +43,98 @@ export default function AboutPage() {
         <section className={styles.biography}>
           <div className="container">
             <div className={styles.bioContent}>
-              <div className={styles.bioImage}>
-                <Image
-                  src="/roymainimage.jpg"
-                  alt="Roy Mghames - Legal Services"
-                  width={400}
-                  height={600}
-                  quality={95}
-                  priority
-                  className={styles.imagePlaceholder}
-                />
-              </div>
-
-              <div className={styles.bioText}>
+              <div className={styles.bioCard}>
                 <h2>Professional Biography</h2>
-                <p>
-                  <strong>Roy Mghames</strong> holds a{" "}
-                  <strong>Law Degree (LLB and M1)</strong> from
-                  <strong>Notre Dame University (NDU)</strong> in{" "}
-                  <strong>International and Lebanese Laws</strong>, and a
-                  <strong>Master’s Degree (M2)</strong> from{" "}
-                  <strong>Sagesse University (ULS)</strong>, specializing in
-                  <strong>Private Laws</strong> with a focus on{" "}
-                  <strong>Business, Commercial, and Corporate</strong> matters.
+                <p className={styles.bioLead}>
+                  <strong>Roy Mghames</strong> (Founder & Associate) and
+                  <strong> Jason Krim</strong> (Associate) lead a
+                  client-centered legal practice focused on delivering
+                  strategic, results-driven counsel across key areas of Lebanese
+                  law. Together, they support individuals and businesses with
+                  comprehensive services spanning <strong>Corporate</strong>,{" "}
+                  <strong>Commercial</strong>,{" "}
+                  <strong>Intellectual Property</strong>,{" "}
+                  <strong>Real Estate</strong>, and <strong>Civil</strong>{" "}
+                  matters.
                 </p>
 
                 <p>
-                  His practice centers on <strong>Corporate Law</strong> for
-                  companies and establishments, <strong>Business Law</strong>,{" "}
-                  <strong>Commercial Law</strong> including trade agreements,
-                  sales, and trademarks, <strong>Real Estate</strong>,{" "}
-                  <strong>Intellectual Property</strong> with emphasis on
-                  trademarks and patents registration, and{" "}
-                  <strong>Civil Law</strong> covering contracts and drafting. He
-                  also offers comprehensive{" "}
-                  <strong>legal services, consultancy, and expediture</strong>.
+                  The team advises on company formation and governance, complex
+                  commercial agreements and trademarks, property transactions,
+                  and civil contracts and drafting—combining practical industry
+                  insight with rigorous legal analysis.
                 </p>
+
+                <h3 className={styles.bioSubheading}>Education</h3>
+                <ul className={styles.educationList}>
+                  <li>
+                    <strong>Roy Mghames</strong>: LLB & M1 in International and
+                    Lebanese Laws (Notre Dame University – NDU); M2 in Private
+                    Law (Sagesse University – ULS), focused on Business,
+                    Commercial, and Corporate Law.
+                  </li>
+                  <li>
+                    <strong>Jason Krim</strong>: BA & M1 in Law (Lebanese
+                    University); M2 in Private Law (Sagesse University – ULS),
+                    specializing in Oil & Gas Law; Member of the Beirut Bar
+                    Association.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Associate Biography */}
-        <section className={styles.biography}>
+        {/* Team Section */}
+        <section className={styles.team}>
           <div className="container">
-            <div className={styles.bioContent}>
-              <div className={styles.bioImage}>
-                <Image
-                  src="/JasonKrim.jpg"
-                  alt="Jason Krim - Attorney at Law"
-                  width={400}
-                  height={600}
-                  quality={95}
-                  className={styles.imagePlaceholder}
-                />
+            <div className={styles.sectionHeaderCentered}>
+              <h2>Our Team</h2>
+              <p>Experienced, client-focused, and dedicated to results</p>
+            </div>
+
+            <div className={styles.teamGrid}>
+              <div className={styles.teamCard}>
+                <div className={styles.teamImageWrapper}>
+                  <Image
+                    src="/roymainimage.jpg"
+                    alt="Roy Mghames"
+                    width={480}
+                    height={600}
+                    quality={95}
+                    className={styles.teamImage}
+                  />
+                </div>
+                <div className={styles.teamInfo}>
+                  <h3 className={styles.teamName}>Roy Mghames</h3>
+                  <p className={styles.teamTitle}>Founder & Associate</p>
+                  <p className={styles.teamBio}>
+                    Corporate, Commercial, IP, Real Estate, and Civil Law.
+                    Strategic counsel for individuals and businesses across
+                    Lebanon.
+                  </p>
+                </div>
               </div>
 
-              <div className={styles.bioText}>
-                <h2>Associate – Jason Krim</h2>
-                <p>
-                  <strong>Jason Krim</strong> is an{" "}
-                  <strong>Attorney at Law</strong> and a{" "}
-                  <strong>Member of the Beirut Bar Association</strong>.
-                </p>
-                <p>
-                  He holds a <strong>BA and M1 in Law</strong> from the{" "}
-                  <strong>Lebanese University</strong>, and an
-                  <strong>M2</strong> from{" "}
-                  <strong>Sagesse University (ULS)</strong> in{" "}
-                  <strong>Private Law</strong>, specializing in
-                  <strong>Oil and Gas Law</strong>.
-                </p>
+              <div className={styles.teamCard}>
+                <div className={styles.teamImageWrapper}>
+                  <Image
+                    src="/JasonKrim.jpg"
+                    alt="Jason Krim"
+                    width={480}
+                    height={600}
+                    quality={95}
+                    className={styles.teamImage}
+                  />
+                </div>
+                <div className={styles.teamInfo}>
+                  <h3 className={styles.teamName}>Jason Krim</h3>
+                  <p className={styles.teamTitle}>Associate</p>
+                  <p className={styles.teamBio}>
+                    Attorney at Law, Beirut Bar Association. Focus on Private
+                    Law with specialization in Oil & Gas Law.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

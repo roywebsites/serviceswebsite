@@ -111,17 +111,6 @@ export default function HomePage() {
                   Learn More About Me
                 </a>
               </div>
-              <div className={styles.introImage}>
-                <Image
-                  src="/roymainimage.jpg"
-                  alt="Roy Mghames - Legal Services"
-                  width={400}
-                  height={600}
-                  quality={95}
-                  priority
-                  className={styles.imagePlaceholder}
-                />
-              </div>
             </div>
           </div>
         </section>
