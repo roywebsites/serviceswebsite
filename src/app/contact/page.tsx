@@ -50,8 +50,8 @@ export default function ContactPage() {
               <div className={styles.contactDetails}>
                 <h2>Get in Touch</h2>
                 <p>
-                  Ready to discuss your legal needs? I&apos;m here to provide
-                  expert guidance and support. Contact me today to schedule your
+                  Ready to discuss your legal needs? We&apos;re here to provide
+                  expert guidance and support. Contact us today to schedule your
                   consultation.
                 </p>
 
@@ -63,8 +63,8 @@ export default function ContactPage() {
                     <div className={styles.methodInfo}>
                       <h3>Email</h3>
                       <p>
-                        <a href="mailto:mghamesroy@gmail.com">
-                          mghamesroy@gmail.com
+                        <a href="mailto:legalservices.lb@outlook.com">
+                          legalservices.lb@outlook.com
                         </a>
                       </p>
                       <span>Response within 24 hours</span>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                 <h3>How much does a consultation cost?</h3>
                 <p>
                   Initial consultations are offered free of charge to discuss
-                  your legal needs and determine how I can best assist you.
+                  your legal needs and determine how we can best assist you.
                 </p>
               </div>
 
@@ -182,7 +182,7 @@ export default function ContactPage() {
               <div className={styles.faqItem}>
                 <h3>Do you handle cases outside of Beirut?</h3>
                 <p>
-                  Yes, I handle cases throughout Lebanon. Remote consultations
+                  Yes, we handle cases throughout Lebanon. Remote consultations
                   are also available for initial discussions and certain legal
                   matters.
                 </p>
@@ -191,7 +191,7 @@ export default function ContactPage() {
               <div className={styles.faqItem}>
                 <h3>How quickly can I expect a response?</h3>
                 <p>
-                  I typically respond to all inquiries within 24 hours during
+                  We typically respond to all inquiries within 24 hours during
                   business days. Urgent matters can be addressed sooner via
                   WhatsApp or phone.
                 </p>
@@ -200,7 +200,7 @@ export default function ContactPage() {
               <div className={styles.faqItem}>
                 <h3>What languages do you speak?</h3>
                 <p>
-                  I provide legal services in Arabic, English, and French to
+                  We provide legal services in Arabic, English, and French to
                   better serve Lebanon&apos;s diverse community and
                   international clients.
                 </p>

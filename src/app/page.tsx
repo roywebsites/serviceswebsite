@@ -94,21 +94,21 @@ export default function HomePage() {
               <div className={styles.introText}>
                 <h2>Welcome to Our Legal Services</h2>
                 <p>
-                  With great experience in Lebanese law, I am committed to
+                  With great experience in Lebanese law, we are committed to
                   providing exceptional legal services to individuals and
-                  businesses throughout Lebanon. My practice is built on the
+                  businesses throughout Lebanon. Our practice is built on the
                   foundations of integrity, expertise, and unwavering dedication
-                  to my clients' success.
+                  to our clients' success.
                 </p>
                 <p>
                   Whether you're facing a complex corporate matter, navigating
                   real estate transactions, or need assistance with your
-                  business and trademark for startups or in-market companies, I
+                  business and trademark for startups or in-market companies, we
                   provide personalized legal solutions tailored to your specific
-                  needs with my focus on business law fields.
+                  needs with our focus on business law fields.
                 </p>
                 <a href="/about" className="btn btn-secondary">
-                  Learn More About Me
+                  Learn More About Us
                 </a>
               </div>
             </div>
@@ -409,7 +409,7 @@ export default function HomePage() {
               <h2>Ready to Get Started?</h2>
               <p>
                 Schedule a free consultation to discuss your legal needs.
-                I&apos;m here to help you navigate your legal challenges with
+                We&apos;re here to help you navigate your legal challenges with
                 confidence.
               </p>
               <div className={styles.ctaActions}>

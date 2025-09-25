@@ -147,19 +147,19 @@ export default function AboutPage() {
           <div className="container">
             <div className={styles.missionContent}>
               <div className={styles.missionText}>
-                <h2>My Mission</h2>
+                <h2>Our Mission</h2>
                 <p>
-                  My mission is to provide exceptional legal services that
-                  empower my clients to navigate complex legal challenges with
-                  confidence. I am committed to delivering personalized,
-                  strategic, and results-driven legal solutions that protect my
+                  Our mission is to provide exceptional legal services that
+                  empower our clients to navigate complex legal challenges with
+                  confidence. We are committed to delivering personalized,
+                  strategic, and results-driven legal solutions that protect our
                   clients&apos; interests and help them achieve their goals.
                 </p>
 
                 <p>
-                  I believe that access to quality legal representation should
-                  not be a privilege but a right. That&apos;s why I strive to
-                  make my services accessible and understandable, ensuring that
+                  We believe that access to quality legal representation should
+                  not be a privilege but a right. That&apos;s why we strive to
+                  make our services accessible and understandable, ensuring that
                   every client feels heard, respected, and well-represented
                   throughout their legal journey.
                 </p>
@@ -229,12 +229,12 @@ export default function AboutPage() {
         <section className={styles.approach}>
           <div className="container">
             <div className={styles.approachContent}>
-              <h2>My Professional Approach</h2>
+              <h2>Our Professional Approach</h2>
               <div className={styles.approachGrid}>
                 <div className={styles.approachItem}>
                   <h3>1. Listen & Understand</h3>
                   <p>
-                    Every client relationship begins with careful listening. I
+                    Every client relationship begins with careful listening. We
                     take the time to understand your unique situation, concerns,
                     and objectives before developing a legal strategy.
                   </p>
@@ -243,7 +243,7 @@ export default function AboutPage() {
                 <div className={styles.approachItem}>
                   <h3>2. Analyze & Plan</h3>
                   <p>
-                    Through thorough legal analysis and research, I develop
+                    Through thorough legal analysis and research, we develop
                     comprehensive strategies that address both immediate needs
                     and long-term goals.
                   </p>
@@ -253,15 +253,15 @@ export default function AboutPage() {
                   <h3>3. Execute & Deliver</h3>
                   <p>
                     With meticulous attention to detail and aggressive advocacy
-                    when necessary, I work tirelessly to achieve the best
-                    possible outcomes for my clients.
+                    when necessary, we work tirelessly to achieve the best
+                    possible outcomes for our clients.
                   </p>
                 </div>
 
                 <div className={styles.approachItem}>
                   <h3>4. Support & Follow-up</h3>
                   <p>
-                    My commitment to clients extends beyond case resolution. I
+                    Our commitment to clients extends beyond case resolution. We
                     provide ongoing support and guidance to ensure long-term
                     success and peace of mind.
                   </p>
@@ -277,8 +277,8 @@ export default function AboutPage() {
             <div className={styles.ctaContent}>
               <h2>Ready to Work Together?</h2>
               <p>
-                I&apos;m here to help you navigate your legal challenges with
-                expertise, integrity, and dedication. Let&apos;s discuss how I
+                We&apos;re here to help you navigate your legal challenges with
+                expertise, integrity, and dedication. Let&apos;s discuss how we
                 can assist you.
               </p>
               <div className={styles.ctaActions}>
@@ -291,7 +291,7 @@ export default function AboutPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  WhatsApp Me
+                  WhatsApp Us
                 </a>
               </div>
             </div>

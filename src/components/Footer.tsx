@@ -103,7 +103,9 @@ export default function Footer() {
                 <span className={styles.contactIcon}>
                   <EmailIcon size={18} />
                 </span>
-                <a href="mailto:mghamesroy@gmail.com">mghamesroy@gmail.com</a>
+                <a href="mailto:legalservices.lb@outlook.com">
+                  legalservices.lb@outlook.com
+                </a>
               </div>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>

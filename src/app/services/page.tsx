@@ -69,10 +69,10 @@ export default function ServicesPage() {
             <div className={styles.overviewContent}>
               <h2>Professional Legal Services</h2>
               <p>
-                With years of experience in Lebanese law, I provide
+                With years of experience in Lebanese law, we provide
                 comprehensive legal services across multiple practice areas.
                 Whether you&apos;re an individual seeking personal legal
-                guidance or a business requiring corporate counsel, I offer
+                guidance or a business requiring corporate counsel, we offer
                 strategic, results-driven solutions tailored to your specific
                 needs.
               </p>

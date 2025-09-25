@@ -26,9 +26,12 @@ interface PageProps {
 }
 
 async function getBlogPost(slug: string) {
-  const response = await fetch(`https://serviceswebsite-2.onrender.com/api/blogs/${slug}`, {
-    cache: "no-store",
-  });
+  const response = await fetch(
+    `https://serviceswebsite-2.onrender.com/api/blogs/${slug}`,
+    {
+      cache: "no-store",
+    }
+  );
   if (!response.ok) {
     throw new Error("Failed to fetch blog post");
   }
@@ -180,7 +183,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <h2>Need Legal Assistance?</h2>
               <p>
                 If you have questions about the topics discussed in this article
-                or need legal representation, I&apos;m here to help.
+                or need legal representation, we&apos;re here to help.
               </p>
               <div className={styles.ctaActions}>
                 <Link href="/contact" className="btn btn-primary btn-lg">

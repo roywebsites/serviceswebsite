@@ -140,7 +140,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
-      { url: "/logo.svg", type: "image/svg+xml", sizes: "any" }
+      { url: "/logo.svg", type: "image/svg+xml", sizes: "any" },
     ],
     shortcut: "/favicon.svg",
     apple: "/logo.svg",
@@ -218,7 +218,7 @@ export default function RootLayout({
           height: 630,
         },
         telephone: "+961-70-653-966",
-        email: "mghamesroy@gmail.com",
+        email: "legalservices.lb@outlook.com",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Beirut",
